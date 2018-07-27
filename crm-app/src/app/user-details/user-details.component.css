@@ -1,22 +1,39 @@
+form {
+    background: #7f7f9826;
+    padding: 20px;
+    width: fit-content;
+    height: fit-content;
+}
+
 .name {
     display: flex;
     flex-direction: row;
+    margin-bottom: 30px;
 }
 
 .contact {
     display: flex;
     flex-direction: row;
+    margin-bottom: 30px;
 }
 
 .name div {
     font-size: 18px;
+    margin-right: 50px;
 }
 
 .contact div {
     font-size: 18px;
+    margin-right: 50px;
 }
 
 .label-input {
     display: flex;
     flex-direction: column;
+}
+
+input {
+    border: 1px solid white;
+    padding: 3px 6px;
+    margin: 0 0 10px 0;
 }

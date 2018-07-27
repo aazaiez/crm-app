@@ -1,0 +1,22 @@
+.name {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+}
+
+.name div {
+    font-size: 18px;
+}
+
+.contact div {
+    font-size: 18px;
+}
+
+.label-input {
+    display: flex;
+    flex-direction: column;
+}

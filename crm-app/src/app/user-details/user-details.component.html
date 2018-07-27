@@ -1,3 +1,25 @@
-<p>
-  user-details works!
-</p>
+
+<form action="">
+  <div class="name">
+    <div class="label-input">
+      <div>First Name:</div> 
+      <input type="text" value="{{ user$.first_name }}">
+    </div>
+
+    <div class="label-input">
+      <div>Last Name:</div> 
+      <input type="text" value="{{ user$.last_name }}">
+    </div>
+  </div>
+
+  <div class="contact">
+    <div class="label-input">
+      <div>Email:</div> 
+      <input type="text" value="{{ user$.email }}">
+    </div>            
+    <div class="label-input">
+      <div>Phone:</div> 
+      <input type="text" value="{{ user$.phone_number }}">
+    </div>
+  </div>
+</form>

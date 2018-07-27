@@ -12,6 +12,10 @@ export class DataService {
   ) { }
 
   fetchUsers() {
-    return this.http.get('https://jsonplaceholder.typicode.com/users');
+    return this.http.get('http://localhost:3000/users');
+  }
+
+  fetchUser(id) {
+    return this.http.get('http://localhost:3000/users/' + id);
   }
 }

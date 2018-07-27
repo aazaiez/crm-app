@@ -3,3 +3,20 @@
     font-size: 25px;
     margin: 15px 0px 15px 30px;
 }
+
+.all-users-button {
+    font-size: 20px;
+    margin: 15px 0px 15px 30px;
+    background-color: rgb(76, 78, 175); 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.all-users-button:hover{
+    background-color: rgb(69, 71, 163);
+    color: rgb(209, 206, 206);
+}

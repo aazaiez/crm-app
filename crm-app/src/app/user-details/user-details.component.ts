@@ -43,6 +43,18 @@ export class UserDetailsComponent implements OnInit {
 
   onSubmit() {
     this.userForm.value.id = this.id$;
+    if (this.userForm.value.firstName === '') {
+      this.userForm.value.firstName = this.user$['firstName'];
+    }
+    if (this.userForm.value.lastName === '') {
+      this.userForm.value.lastName = this.user$['lastName'];
+    }
+    if (this.userForm.value.email === '') {
+      this.userForm.value.email = this.user$['email'];
+    }
+    if (this.userForm.value.phoneNumber === '') {
+      this.userForm.value.phoneNumber = this.user$['phoneNumber'];
+    }
     this.data.updateUser(this.userForm.value)
       .subscribe(
         (data) => {

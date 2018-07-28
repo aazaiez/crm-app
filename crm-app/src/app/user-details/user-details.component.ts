@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { ActivatedRoute } from '@angular/router';
+import { FormGroup, FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -11,6 +12,12 @@ import { Observable } from 'rxjs';
 export class UserDetailsComponent implements OnInit {
   id$: number;
   user$: Object;
+  userForm = new FormGroup({
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+    phoneNumber: new FormControl(''),
+    email: new FormControl(''),
+  });
 
   constructor(
     private data: DataService,
@@ -30,6 +37,16 @@ export class UserDetailsComponent implements OnInit {
         this.user$ = data;
         }
       );
+  }
+
+  onSubmit() {
+    this.userForm.value.id = this.id$;
+    this.data.updateUser(this.userForm.value);
+    console.log(this.userForm.value);
+  }
+
+  onDelete() {
+    this.data.deleteUser(this.id$);
   }
 
 }

@@ -18,4 +18,12 @@ export class DataService {
   fetchUser(id) {
     return this.http.get('http://localhost:3000/users/' + id);
   }
+
+  updateUser(user) {
+    return this.http.put('http://localhost:3000/users/' + user.id, user);
+  }
+
+  deleteUser(id) {
+    return this.http.delete('http://localhost:3000/users/' + id);
+  }
 }

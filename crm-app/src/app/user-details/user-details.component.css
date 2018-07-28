@@ -17,6 +17,13 @@ form {
     margin-bottom: 30px;
 }
 
+.user-details-buttons {
+    display: flex;
+    flex-direction: row;
+    margin: 6px 50px;
+    justify-content: flex-end;
+}
+
 .name div {
     font-size: 18px;
     margin-right: 50px;

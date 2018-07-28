@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 
@@ -21,7 +21,8 @@ export class UserDetailsComponent implements OnInit {
 
   constructor(
     private data: DataService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {
     this.route.params.subscribe(
       (params) => {
@@ -31,6 +32,7 @@ export class UserDetailsComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(this.user$);
     this.data.fetchUser(this.id$)
       .subscribe(
         (data) => {
@@ -41,12 +43,20 @@ export class UserDetailsComponent implements OnInit {
 
   onSubmit() {
     this.userForm.value.id = this.id$;
-    this.data.updateUser(this.userForm.value);
+    this.data.updateUser(this.userForm.value)
+      .subscribe(
+        (data) => {
+        }
+      );
     console.log(this.userForm.value);
   }
 
   onDelete() {
-    this.data.deleteUser(this.id$);
+    this.data.deleteUser(this.id$)
+      .subscribe(
+        (data) => {
+        }
+      );
+    this.router.navigate(['./users']);
   }
-
 }

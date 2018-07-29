@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class DataService {
-
+  all_users = {};
   constructor(
     private http: HttpClient
   ) { }
@@ -25,5 +25,13 @@ export class DataService {
 
   deleteUser(id) {
     return this.http.delete('http://localhost:3000/users/' + id);
+  }
+
+  findUser() {
+    this.http.get('http://localhost:3000/users')
+      .subscribe(
+        data => this.all_users = data
+      );
+    console.log(this.all_users);
   }
 }

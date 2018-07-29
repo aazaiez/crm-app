@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 // importing http client in order to be able to use it once data service is injected into component
 import { HttpClientModule } from '@angular/common/http';
+import { SearchResultsComponent } from './search-results/search-results.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     UsersComponent,
     UserDetailsComponent,
+    SearchResultsComponent,
   ],
   imports: [
     BrowserModule,

@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { AuthService } from './auth.service';
 import { AuthGuard } from './auth-guard.service';
+import { DemoAccessComponent } from './demo-access/demo-access.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { AuthGuard } from './auth-guard.service';
     UsersComponent,
     UserDetailsComponent,
     SearchResultsComponent,
+    DemoAccessComponent,
   ],
   imports: [
     BrowserModule,

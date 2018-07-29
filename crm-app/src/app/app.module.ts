@@ -11,6 +11,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 // importing http client in order to be able to use it once data service is injected into component
 import { HttpClientModule } from '@angular/common/http';
 import { SearchResultsComponent } from './search-results/search-results.component';
+import { AuthService } from './auth.service';
+import { AuthGuard } from './auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,7 @@ import { SearchResultsComponent } from './search-results/search-results.componen
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

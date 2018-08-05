@@ -1,14 +1,6 @@
 {
   "users": [
     {
-      "id": 1,
-      "firstName": "Costanza",
-      "lastName": "Krale",
-      "email": "ckrale0@lulu.com",
-      "gender": "Female",
-      "phoneNumber": "629-847-6167"
-    },
-    {
       "id": 3,
       "firstName": "Lynsey",
       "lastName": "Roke",
